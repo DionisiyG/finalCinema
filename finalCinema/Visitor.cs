@@ -15,24 +15,6 @@ namespace finalCinema
         private string[] name = new string[] { "Jack", "Asa", "Jayden", "Keiran", "Gans" };
         private string[] surname = new string[] { "Black", "Akira", "James", "Lee", "Split", "May" };
 
-       public Visitor()
-        {
-            int names = RandomProvider.GetThreadRandom().Next(5);           
-            _name = name[names];
-
-            int surnames = RandomProvider.GetThreadRandom().Next(6);           
-            _surname = surname[surnames];
-
-            _age = RandomProvider.GetThreadRandom().Next(90);
-
-            _sex = RandomProvider.GetThreadRandom().Next(2);
-            if (_sex == 0)
-            {
-                Console.Write (" ");
-            }
-            else
-                Console.Write(" ");
-        }
 
         public string Name
         {
@@ -59,6 +41,24 @@ namespace finalCinema
             set { _sex = value; }
         }
 
+       public Visitor()
+        {
+            int names = RandomProvider.GetThreadRandom().Next(5);           
+            _name = name[names];
+
+            int surnames = RandomProvider.GetThreadRandom().Next(6);           
+            _surname = surname[surnames];
+
+            _age = RandomProvider.GetThreadRandom().Next(90);
+
+            _sex = RandomProvider.GetThreadRandom().Next(2);
+            if (_sex == 0)
+            {
+                Console.Write (" ");
+            }
+            else
+                Console.Write(" ");
+        }
         
     }
 }
